@@ -1,21 +1,21 @@
-import Head from "next/head";
-import { RootLayout } from '../../additional'
+import Head from 'next/head'
+import { RootLayout } from 'additional'
 
-import { Header } from "./structure/Header";
-import { Footer } from "./structure/Footer";
+import { Header } from './structure/Header'
+import { Footer } from './structure/Footer'
 
 export const Layout: React.FC<RootLayout> = ({ children, title }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content="An E-commerce project" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='An E-commerce project' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main>{children}</main>        
+      <main>{children}</main>
       <Footer />
     </>
-  );
-};
+  )
+}
