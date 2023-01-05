@@ -6,3 +6,14 @@ export interface RootLayout {
   children: React.ReactNode
   title: string
 }
+
+export interface LinkColumns {
+  id: number
+  title: string
+  column: LinkProps[]
+}
+
+export interface LinkProps {
+  path: string
+  route: string
+}
