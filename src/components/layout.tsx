@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { RootLayout } from '../../additional'
 
+import { Header } from "./structure/Header";
+
 export const Layout: React.FC<RootLayout> = ({ children, title }) => {
   return (
     <>
@@ -10,7 +12,8 @@ export const Layout: React.FC<RootLayout> = ({ children, title }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <Header />
+      <main>{children}</main>        
     </>
   );
 };
