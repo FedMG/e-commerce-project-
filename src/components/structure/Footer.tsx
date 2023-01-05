@@ -1,84 +1,41 @@
-import Link from "next/link";
+import { ReactElement } from 'react'
+import Link from 'next/link'
 
-const links = [
-  {
-    id: 1,
-    title: "Policy",
-    column: [
-      { route: "Privacy Policy", path: "/privacy-policy" },
-      { route: "Terms of Service", path: "/terms-of-service" },
-      { route: "Consumer Rights", path: "/consumer-rights" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Support",
-    column: [
-      { route: "Contact Us", path: "/contact-us" },
-      { route: "Forum", path: "/forum" },
-      { route: "Common questions", path: "/common-questions" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Social Networks",
-    column: [
-      { route: "Instagram", path: "/instagram/ecommerce" },
-      { route: "Twitter", path: "/twitter/ecommerce" },
-      { route: "Facebook", path: "/facebook/ecommerce" },
-    ],
-  },
-];
+import { LinkProps, LinkColumns } from 'additional'
+import { Anchor } from 'utils/components'
+import { links } from './footerLinks'
 
-interface AnchorProps {
-  path: string;
-  route: string;
+const createRows = ({ route, path }: LinkProps): ReactElement => {
+  if (!['Instagram', 'Twitter', 'Facebook'].includes(route)) {
+    return (
+      <Link key={route} href={path} className='text-white hover:text-gray-400'>
+        {route}
+      </Link>
+    )
+  }
+  return <Anchor key={route} path={path} route={route} />
 }
 
-const Anchor: React.FC<AnchorProps> = ({ path, route }) => (
-  <a
-    href={path}
-    className="text-white hover:text-gray-400"
-    target="_blank"
-    rel="noreferrer"
-  >
-    {route}
-  </a>
-);
+const createColumns = ({ id, title, column }: LinkColumns): ReactElement => (
+  <div key={id}>
+    <h4>{title}</h4>
+    <div className='flex flex-col'>{column.map(createRows)}</div>
+  </div>
+)
 
-export const Footer = () => {
+export const Footer = (): ReactElement => {
   return (
-    <footer className="fixed bottom-0 w-full bg-gray-900 text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <div className="text-sm">
+    <footer className='fixed bottom-0 w-full bg-gray-900 text-white py-6'>
+      <div className='container mx-auto px-4'>
+        <div className='flex items-center justify-between'>
+          <div className='text-sm'>
             <p>&copy; 2023 e-commerce</p>
           </div>
-          <div className="flex flex-row sm:space-x-6">
-            {links.map(({ id, title, column }) => (
-              <div key={id}>
-                <h4>{title}</h4>
-                <div className="flex flex-col">
-                  {column.map(({ route, path }) => {
-                    if (title !== "Social Networks") {
-                      return (
-                        <Link
-                          key={route}
-                          href={path}
-                          className="text-white hover:text-gray-400"
-                        >
-                          {route}
-                        </Link>
-                      );
-                    }
-                    return <Anchor key={route} path={path} route={route} />;
-                  })}
-                </div>
-              </div>
-            ))}
+          <div className='flex flex-row sm:space-x-6'>
+            {links.map(createColumns)}
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
