@@ -2,6 +2,7 @@ import Head from "next/head";
 import { RootLayout } from '../../additional'
 
 import { Header } from "./structure/Header";
+import { Footer } from "./structure/Footer";
 
 export const Layout: React.FC<RootLayout> = ({ children, title }) => {
   return (
@@ -14,6 +15,7 @@ export const Layout: React.FC<RootLayout> = ({ children, title }) => {
       </Head>
       <Header />
       <main>{children}</main>        
+      <Footer />
     </>
   );
 };
