@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { Layout } from '../components/layout'
+import { Layout } from 'src/components/layout'
 
 export default function Home (): ReactElement {
   return <h1 className='text-3xl font-bold'>Home</h1>

@@ -2,11 +2,13 @@ import { ReactElement } from 'react'
 import Link from 'next/link'
 
 import { LinkProps, LinkColumns } from 'additional'
-import { Anchor } from 'utils/components'
+import { Anchor } from 'src/utils/components'
 import { links } from './footerLinks'
 
 const createRows = ({ route, path }: LinkProps): ReactElement => {
-  if (!['Instagram', 'Twitter', 'Facebook'].includes(route)) {
+  const options = ['Instagram', 'Twitter', 'Facebook']
+
+  if (!options.includes(route)) {
     return (
       <Link key={route} href={path} className='text-white hover:text-gray-400'>
         {route}
