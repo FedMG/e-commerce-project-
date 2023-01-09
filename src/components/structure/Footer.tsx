@@ -5,7 +5,7 @@ import { LinkProps, LinkColumns } from 'additional'
 import { Anchor } from 'src/utils/components'
 import { links } from './footerLinks'
 
-const createRows = ({ route, path }: LinkProps): ReactElement => {
+export const createRows = ({ route, path }: LinkProps): ReactElement => {
   const options = ['Instagram', 'Twitter', 'Facebook']
 
   if (!options.includes(route)) {
@@ -18,7 +18,7 @@ const createRows = ({ route, path }: LinkProps): ReactElement => {
   return <Anchor key={route} path={path} route={route} />
 }
 
-const createColumns = ({ id, title, column }: LinkColumns): ReactElement => (
+export const createColumns = ({ id, title, column }: LinkColumns): ReactElement => (
   <div key={id}>
     <h4>{title}</h4>
     <div className='flex flex-col'>{column.map(createRows)}</div>

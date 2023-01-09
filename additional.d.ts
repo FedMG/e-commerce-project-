@@ -1,3 +1,5 @@
+export type CreateVerifyValues = boolean | ((value: string) => boolean)
+
 export interface LayoutComponent {
   getLayout?: (page: React.ReactElement) => React.ReactElement
 }

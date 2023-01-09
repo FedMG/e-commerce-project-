@@ -7,6 +7,7 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
+  modulePathIgnorePatterns: ['test-validators', 'test-values'],
   moduleDirectories: ['node_modules', '<rootDir>'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
