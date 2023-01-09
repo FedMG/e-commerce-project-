@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should renders a footer unchanged 1`] = `
+<div>
+  <footer
+    class="fixed bottom-0 w-full bg-gray-900 text-white py-6"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="text-sm"
+        >
+          <p>
+            © 2023 e-commerce
+          </p>
+        </div>
+        <div
+          class="flex flex-row sm:space-x-6"
+        >
+          <div>
+            <h4>
+              Policy
+            </h4>
+            <div
+              class="flex flex-col"
+            >
+              <a
+                class="text-white hover:text-gray-400"
+                href="/privacy-policy"
+              >
+                Privacy Policy
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/terms-of-service"
+              >
+                Terms of Service
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/consumer-rights"
+              >
+                Consumer Rights
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4>
+              Support
+            </h4>
+            <div
+              class="flex flex-col"
+            >
+              <a
+                class="text-white hover:text-gray-400"
+                href="/contact-us"
+              >
+                Contact Us
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/forum"
+              >
+                Forum
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/common-questions"
+              >
+                Common questions
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4>
+              Networks
+            </h4>
+            <div
+              class="flex flex-col"
+            >
+              <a
+                class="text-white hover:text-gray-400"
+                href="/instagram/ecommerce"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Instagram
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/twitter/ecommerce"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+              <a
+                class="text-white hover:text-gray-400"
+                href="/facebook/ecommerce"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

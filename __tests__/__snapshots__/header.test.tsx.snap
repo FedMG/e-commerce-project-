@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should renders an header component unchanged 1`] = `
+<div>
+  <header
+    class="flex bg-orange-300 border-gray-200"
+  >
+    <div
+      class="flex items-center px-2 py-2"
+    >
+      <img
+        alt="E-commerce logo"
+        class="mr-3"
+        data-nimg="1"
+        decoding="async"
+        height="35"
+        loading="lazy"
+        src="/logo.svg"
+        style="color: transparent;"
+        width="35"
+      />
+      <span
+        class="text-xl font-semibold"
+      >
+        E-commerce
+      </span>
+    </div>
+  </header>
+</div>
+`;
