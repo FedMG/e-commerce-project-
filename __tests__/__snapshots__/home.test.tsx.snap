@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should renders an header component unchanged 1`] = `
+exports[`should renders an home with a layout unchanged 1`] = `
 <div>
   <header
     class="flex bg-orange-300 border-gray-200"
@@ -26,7 +26,9 @@ exports[`should renders an header component unchanged 1`] = `
       </span>
     </div>
   </header>
-  <main>
+  <main
+    class="h-screen"
+  >
     <h1
       class="text-3xl font-bold"
     >

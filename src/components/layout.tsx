@@ -14,7 +14,7 @@ export const Layout: React.FC<RootLayout> = ({ children, title }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className='h-screen'>{children}</main>
       <Footer />
     </>
   )
