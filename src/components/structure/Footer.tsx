@@ -10,15 +10,15 @@ export const createRows = ({ route, path }: LinkProps): ReactElement => {
 
   if (!options.includes(route)) {
     return (
-      <div className='inline'>
-        <Link key={route} href={path} className='text-white hover:text-gray-400 hover:underline'>
+      <div className='inline' key={route}>
+        <Link  href={path} className='text-white hover:text-gray-400 hover:underline'>
           {route}
         </Link>
       </div>
     )
   }
   return (
-    <div className='inline'><Anchor key={route} path={path} route={route} /></div>)
+    <div className='inline' key={route}><Anchor path={path} route={route} /></div>)
 }
 
 export const createColumns = ({ id, title, column }: FooterLinksColumns): ReactElement => (
