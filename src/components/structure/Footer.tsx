@@ -1,41 +1,43 @@
+import { LinkProps, FooterLinksColumns, FooterProps } from 'additional'
 import { ReactElement } from 'react'
 import Link from 'next/link'
 
-import { LinkProps, LinkColumns } from 'additional'
 import { Anchor } from 'src/utils/components'
-import { links } from './footerLinks'
+import { getYear } from 'src/utils/functions'
 
 export const createRows = ({ route, path }: LinkProps): ReactElement => {
   const options = ['Instagram', 'Twitter', 'Facebook']
 
   if (!options.includes(route)) {
     return (
-      <Link key={route} href={path} className='text-white hover:text-gray-400'>
-        {route}
-      </Link>
+      <div className='inline'>
+        <Link key={route} href={path} className='text-white hover:text-gray-400 hover:underline'>
+          {route}
+        </Link>
+      </div>
     )
   }
-  return <Anchor key={route} path={path} route={route} />
+  return (
+    <div className='inline'><Anchor key={route} path={path} route={route} /></div>)
 }
 
-export const createColumns = ({ id, title, column }: LinkColumns): ReactElement => (
-  <div key={id}>
-    <h4>{title}</h4>
+export const createColumns = ({ id, title, column }: FooterLinksColumns): ReactElement => (
+  <div key={id} className='p-2 border sm:p-4 sm:border-none'>
+    <h4 className='font-bold text-lg mb-[0.65em] underline underline-offset-4 sm:text-xl'>{title}</h4>
     <div className='flex flex-col'>{column.map(createRows)}</div>
   </div>
 )
 
-export const Footer = (): ReactElement => {
+export const Footer = ({ links }: FooterProps): ReactElement => {
   return (
-    <footer className='fixed bottom-0 w-full bg-gray-900 text-white py-6'>
-      <div className='container mx-auto px-4'>
-        <div className='flex items-center justify-between'>
-          <div className='text-sm'>
-            <p>&copy; 2023 e-commerce</p>
-          </div>
-          <div className='flex flex-row sm:space-x-6'>
-            {links.map(createColumns)}
-          </div>
+    <footer className=' w-full bg-[#000000] text-white px-4 pt-4'>
+      <div className='w-full grid grid-cols-2 gap-8 sm:flex sm:flex-row sm:justify-evenly sm:gap-2'>
+        {links.map(createColumns)}
+      </div>
+
+      <div className='flex text-end pt-2'>
+        <div className='w-full text-sm'>
+          <p>&copy; {getYear()} e-commerce</p>
         </div>
       </div>
     </footer>
