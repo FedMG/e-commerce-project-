@@ -3,8 +3,9 @@ import { RootLayout } from 'additional'
 
 import { Header } from './structure/Header'
 import { Footer } from './structure/Footer'
+import { Navigation } from './Navigation'
 
-export const Layout: React.FC<RootLayout> = ({ children, title }) => {
+export const Layout: React.FC<RootLayout> = ({ children, title, links }) => {
   return (
     <>
       <Head>
@@ -14,8 +15,9 @@ export const Layout: React.FC<RootLayout> = ({ children, title }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main className='h-screen'>{children}</main>
-      <Footer />
+      <Navigation />
+      <main className='h-screen bg-[#fefefe]'>{children}</main>
+      <Footer links={links} />
     </>
   )
 }

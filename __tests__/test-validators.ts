@@ -1,5 +1,5 @@
 import { isNumber, isFunction, isObject } from 'src/utils/validators'
-import { CreateVerifyValues, LinkColumns } from 'additional'
+import { CreateVerifyValues, FooterLinksColumns as LinkColumns } from 'additional'
 
 const ZERO = 0
 const ONE = 1

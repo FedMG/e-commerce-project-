@@ -1,4 +1,6 @@
-export const links = [
+import { FooterLinksColumns } from 'additional'
+
+export const links: FooterLinksColumns[] = [
   {
     id: 1,
     title: 'Policy',
@@ -12,8 +14,8 @@ export const links = [
     id: 2,
     title: 'Support',
     column: [
-      { route: 'Contact Us', path: '/contact-us' },
       { route: 'Forum', path: '/forum' },
+      { route: 'Contact Us', path: '/contact-us' },
       { route: 'Common questions', path: '/common-questions' }
     ]
   },
@@ -21,9 +23,9 @@ export const links = [
     id: 3,
     title: 'Networks',
     column: [
-      { route: 'Instagram', path: '/instagram/ecommerce' },
       { route: 'Twitter', path: '/twitter/ecommerce' },
-      { route: 'Facebook', path: '/facebook/ecommerce' }
+      { route: 'Facebook', path: '/facebook/ecommerce' },
+      { route: 'Instagram', path: '/instagram/ecommerce' }
     ]
   }
 ]
