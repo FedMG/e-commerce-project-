@@ -6,7 +6,7 @@ it('should renders an anchor with a path and route props', () => {
   expect(container).toMatchInlineSnapshot(`
 <div>
   <a
-    class="text-white hover:text-gray-400"
+    class="text-white hover:text-gray-400 hover:underline "
     href="www.instagram.com"
     rel="noreferrer"
     target="_blank"
@@ -22,7 +22,7 @@ it('should renders an anchor without a path and route props', () => {
   expect(container).toMatchInlineSnapshot(`
 <div>
   <a
-    class="text-white hover:text-gray-400"
+    class="text-white hover:text-gray-400 hover:underline "
     href="#"
     rel="noreferrer"
     target="_blank"
