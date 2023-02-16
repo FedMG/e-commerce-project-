@@ -3,7 +3,7 @@
 exports[`should renders an header component unchanged 1`] = `
 <div>
   <header
-    class="flex bg-orange-300 border-gray-200"
+    class="flex bg-[#000000]"
   >
     <div
       class="flex items-center px-2 py-2"
@@ -20,7 +20,7 @@ exports[`should renders an header component unchanged 1`] = `
         width="35"
       />
       <span
-        class="text-xl font-semibold"
+        class="text-xl font-semibold text-white"
       >
         E-commerce
       </span>
