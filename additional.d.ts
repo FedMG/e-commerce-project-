@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 
-export type CreateVerifyValues = boolean | ((value: string) => boolean)
 export interface HomeStaticProps {
   props: FooterProps
 }

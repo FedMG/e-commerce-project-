@@ -5,9 +5,9 @@ import { HomeStaticProps, FooterLinksColumns } from 'additional'
 import { Layout } from 'src/components/layout'
 import { links } from 'src/components/structure/footerLinks'
 
-interface HomePageProps { links: FooterLinksColumns[] }
+interface HomeProps { links: FooterLinksColumns[] }
 
-const Home: NextPageWithLayout<HomePageProps> = (): ReactElement => {
+const Home: NextPageWithLayout<HomeProps> = (): ReactElement => {
   return <h1 className='text-3xl font-bold'>Home</h1>
 }
 
